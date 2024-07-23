@@ -1,0 +1,105 @@
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  /* Magic Quote styles */
+  .magicQuote {
+    text-align: center;
+  }
+  
+  .magicQuoteh2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .magicQuoteBtns {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .magicQuoteBtns:hover {
+    background-color: #0056b3;
+  }
+  
+  /* User Quote styles */
+  .userQuote {
+    margin-top: 40px;
+  }
+  
+  .userQuote h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .inputButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .inputButton input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .inputButton button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .inputButton button:hover {
+    background-color: #218838;
+  }
+  
+  /* List styles */
+  .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .list li {
+    list-style: none;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .list button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .list button:hover {
+    background-color: #c82333;
+  }
+  

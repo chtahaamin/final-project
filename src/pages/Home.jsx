@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div className="container home-container">
-      <h1>Welcome to the Home Page</h1>
+      <h1>Welcome to Quote Generator. Please press Generate quote button to get quote</h1>
       <MagicQuote />
       <UserQuote />
       <button onClick={handleLogout} className="logout-btn">Log Out</button>

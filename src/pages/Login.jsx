@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Import the CSS file
+import './Login.css'; 
 
 const Login = () => {
   const email = useRef();
@@ -39,8 +39,10 @@ const Login = () => {
             className="login-form-input"
           />
         </div>
-        <button onClick={handleLogin} className="login-form-button">Login</button>
-        <a href="/" className="signup-link">Don't have an account? Sign Up</a>
+        <button onClick={handleLogin} 
+        className="login-form-button">Login</button>
+        <a href="/" 
+        className="signup-link">Don't have an account? Sign Up</a>
       </div>
     </div>
   );

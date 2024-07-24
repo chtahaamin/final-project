@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import './Login.css'; 
 
@@ -6,6 +6,7 @@ const Login = () => {
   const email = useRef();
   const password = useRef();
   const navigate = useNavigate();
+  const [loggedIn ,setLoggedIn]=useState(false)
 
   const handleLogin = () => {
     const storedEmail = localStorage.getItem('email');
@@ -13,7 +14,8 @@ const Login = () => {
 
     if (email.current.value === storedEmail && password.current.value === storedPassword) {
       alert('Login successful');
-      navigate('/home', { replace: true });
+      navigate('/', { replace: true });
+      setLoggedIn(true)
     } else {
       alert('Invalid email or password');
     }
@@ -41,7 +43,7 @@ const Login = () => {
         </div>
         <button onClick={handleLogin} 
         className="login-form-button">Login</button>
-        <Link to="/" 
+        <Link to="/signup" 
         className="signup-link">Don't have an account? Sign Up</Link>
       </div>
     </div>

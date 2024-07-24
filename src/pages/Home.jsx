@@ -12,12 +12,12 @@ const Home = () => {
     
     localStorage.removeItem('authToken'); 
   
-    navigate('/login');
+    navigate('/login',{replace:true});
   };
 
   return (
     <div className="container home-container">
-      <NavBar/>
+      if(!loggedIn){<NavBar/>}
       <h1>Welcome to Quote Generator. Please press Generate quote button to get quote</h1>
       <MagicQuote />
       <UserQuote />

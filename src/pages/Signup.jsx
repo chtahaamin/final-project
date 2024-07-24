@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Signup.css'; 
 
 const SignUp = () => {
@@ -50,7 +50,7 @@ const SignUp = () => {
           />
         </div>
         <button onClick={handleSignUp} className="signup-form-button">Sign Up</button>
-        <a href="/login" className="login-link">Already have an account? Login</a>
+        <Link to="/login" className="login-link">Already have an account? Login</Link>
       </div>
     </div>
   );

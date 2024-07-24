@@ -1,24 +1,22 @@
-/* Container styles */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-  }
+
   
   /* Magic Quote styles */
   .magicQuote {
     text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .magicQuoteh2 {
     font-size: 24px;
     color: #333;
   }
-  
+  .quotesDisplayMain{
+    height:70px
+  }
+  .quotesDisplay{
+    font-size: 2rem;
+  }
   .magicQuoteBtns {
     padding: 10px 20px;
     margin-top: 20px;

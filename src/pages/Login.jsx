@@ -1,12 +1,14 @@
-import React, { useRef,useState } from 'react';
+import React, {  useContext, useRef,useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { LoginContext } from '../Components/LoginContext';
 import './Login.css'; 
 
 const Login = () => {
   const email = useRef();
   const password = useRef();
   const navigate = useNavigate();
-  const [loggedIn ,setLoggedIn]=useState(false)
+  const {login} =useContext(LoginContext)
+    
 
   const handleLogin = () => {
     const storedEmail = localStorage.getItem('email');
@@ -15,7 +17,7 @@ const Login = () => {
     if (email.current.value === storedEmail && password.current.value === storedPassword) {
       alert('Login successful');
       navigate('/', { replace: true });
-      setLoggedIn(true)
+      login()
     } else {
       alert('Invalid email or password');
     }

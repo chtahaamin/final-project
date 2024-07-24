@@ -1,12 +1,16 @@
-/* Home page styles */
+
 .home-container {
     text-align: center;
+    
   }
   
-  .home-container h1 {
+  .home-container-h1{
     font-size: 36px;
     color: #333;
+    padding :10px 20px ;
     margin-bottom: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .home-container .logout-btn {

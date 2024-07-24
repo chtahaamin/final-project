@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './MagicQuote.css';
+import '../App.css'
 
 const MagicQuote = () => {
   const [userDisplay, setUserDisplay] = useState([]);
@@ -36,7 +37,9 @@ const MagicQuote = () => {
     <>
       <div className="container magicQuote">
         <h2 className="magicQuoteh2">Magic Quote</h2>
-        <h4>{userDisplay2}</h4>
+        <div className="quotesDisplayMain">
+        <h4 className="quotesDisplay">{userDisplay2}</h4>
+        </div>
         <button onClick={fetchQuote} className="logout magicQuoteBtns">Generate Quote</button>
       </div>
     </>

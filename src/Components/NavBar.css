@@ -2,7 +2,12 @@
     display:flex;
     align-items: center;
     justify-content: space-between;
-    color:white
+    color:white;
+    height:13px
+    
+}
+.Navbar-H1{
+    color :black
 }
 .btn-div{
     display:flex;

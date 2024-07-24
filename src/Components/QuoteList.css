@@ -1,8 +1,8 @@
 /* QuoteList.css */
 
-/* Style for the unordered list containing quotes */
+
 .quote-list {
-    list-style-type: none; /* Remove default list styles */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
   }
@@ -20,7 +20,7 @@
   }
   
   .quote-item:last-child {
-    border-bottom: none; /* Remove border from last item */
+    border-bottom: none; 
   }
   
   /* Style for the delete button */

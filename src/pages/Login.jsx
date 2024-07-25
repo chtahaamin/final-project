@@ -24,6 +24,8 @@ const Login = () => {
   };
 
   return (
+    <>
+    <div className="login-container-main">
     <div className="login-container">
       <h2>Login</h2>
       <div className="login-form">
@@ -49,6 +51,8 @@ const Login = () => {
         className="signup-link">Don't have an account? Sign Up</Link>
       </div>
     </div>
+    </div>
+    </>
   );
 };
 

@@ -10,6 +10,7 @@
   .magicQuoteh2 {
     font-size: 24px;
     color: #333;
+    margin-bottom: 20px;
   }
   .quotesDisplayMain{
     height:70px
@@ -19,6 +20,7 @@
   }
   .magicQuoteBtns {
     padding: 10px 20px;
+    font-size: 16px;
     margin-top: 20px;
     background-color: #007bff;
     color: #fff;

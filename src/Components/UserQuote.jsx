@@ -5,6 +5,8 @@ import './UserQuote.css'
 const UserQuote = () => {
   const [value, setValue] = useState('');
   const [quotes, setQuotes] = useState([]);
+  const[showAllQuotes,setShowAllQuotes]=useState([])
+  const [show,setShow]=useState(false)
 
   useEffect(() => {
     const storedQuotes = JSON.parse(localStorage.getItem('userQuotes')) || [];
@@ -30,6 +32,18 @@ const UserQuote = () => {
     setQuotes(updatedQuotes);
     localStorage.setItem('userQuotes', JSON.stringify(updatedQuotes));
   };
+  const handleSearch=()=>{
+   if (value){  const filteredValue=quotes.filter((quote=>quote.quote.includes(value)))
+setShowAllQuotes(quotes)
+    setQuotes(filteredValue)
+    setValue('')
+    setShow(true)
+   }
+  }
+  const handleShowAll=()=>{
+    setQuotes(showAllQuotes)
+    setShow(false)
+  }
 
   return (
     <div className="userQuote container">
@@ -37,10 +51,14 @@ const UserQuote = () => {
         <h2>User Quotes</h2>
         <div className="inputButton">
           <input type="text" onChange={handleOnChange} value={value} />
-          <button onClick={handleOnClick} className="logout">Add quote</button>
+          <div className="addQuote-Search-Btns">
+          <button onClick={handleOnClick} id="AddquoteBtn">Add quote</button>
+          <button onClick={handleSearch} id="searchBtn">search</button>
+          </div>
         </div>
       </div>
       <div>
+       {show?( <button onClick ={handleShowAll} className='showAllBtn'>Show all quotes</button>):<div></div>}
         <ul className="quote-list">
           {quotes.length > 0 ? (
             quotes.map((quote, index) => (

@@ -17,12 +17,13 @@ const Home = () => {
   };
 
   return (
-    <div className="container  home-container">
+    <div className=" container  home-container">
       {!loggedIn && <NavBar />} 
-      <h1 classNamw="home-container-h1 ">Welcome to Quote Generator. Please press Generate quote button to get quote</h1>
+      <h1 className="home-container-h1 ">Welcome to Quote Generator. Please press Generate quote button to get quote</h1>
       <MagicQuote />
       {loggedIn && <UserQuote />} 
-     {loggedIn?( <button onClick={handleLogout} className="logout-btn">Log Out</button>):<div></div>}
+     {loggedIn?( <button onClick={handleLogout} className="logout-btn">Log Out</button>):<div className ="container signin-div">please login to view save quotations</div>}
+    
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import {ValidEmail, ValidPassword,ValidName}  from '../Components/RegeEx'
 import './Signup.css'; 
 
 const SignUp = () => {
@@ -10,6 +11,20 @@ const SignUp = () => {
 
   const handleSignUp = () => {
     if (name.current.value && email.current.value && password.current.value) {
+      if (!ValidName.test(name.current.value)) {
+        alert('Please enter a valid name (5-30 alphabetic characters)');
+        return;
+      }
+      
+      if (!ValidEmail.test(email.current.value)) {
+        alert('Please enter a valid email address');
+        return;
+      }
+  
+      if (!ValidPassword.test(password.current.value)) {
+        alert('Password must be at least 6 characters long and contain both letters and numbers');
+        return;
+      }
       localStorage.setItem('name', name.current.value);
       localStorage.setItem('email', email.current.value);
       localStorage.setItem('password', password.current.value);
@@ -22,8 +37,11 @@ const SignUp = () => {
   };
 
   return (
+    <>
+    <div className="main-signup">
     <div className="signup-container">
-      <h2>Sign Up</h2>
+
+      <h2 className="signupHeading">Sign Up</h2>
       <div className="signup-form">
         <div className="signup-form-group">
           <input
@@ -53,6 +71,8 @@ const SignUp = () => {
         <Link to="/login" className="login-link">Already have an account? Login</Link>
       </div>
     </div>
+    </div>
+    </>
   );
 };
 

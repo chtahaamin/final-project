@@ -11,7 +11,7 @@
 }
 .btn-div{
     display:flex;
-    gap :15px
+    gap :15%
 }
 
 
@@ -31,7 +31,7 @@
     color:#007bff ;
 }
 .linkSignUpBtn{
-    padding: 8px 20px;
+    padding: 8px 10px ;
     font-size :1.2rem;
     text-decoration: none;
     background-color:#fff ;

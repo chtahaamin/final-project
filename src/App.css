@@ -14,3 +14,37 @@
     border-radius: 8px;
     background-color: #f9f9f9;
   }
+  @media screen  and (max-width: 600px){
+:root{
+  font-size: 10px;
+}
+.navbar{
+  padding :0 ;
+}
+.signup-link{
+  font-size: 1.5rem;
+} 
+.loginHeading{
+  font-size: 2rem;
+  margin:0 0 30px 0 
+}
+#AddquoteBtn {
+  padding: 4px 10px;
+  font-size: 1rem;
+}
+#searchBtn {
+  padding: 4px 10px;   
+   font-size: 1rem;
+}
+.Navbar-H1 {font-size: 1rem;}
+.btn-div{
+  gap:0;
+}
+.linkSignInBtn {
+padding :5% 10%;
+  }
+ .linkSignUpBtn{
+padding :5% 10%;
+
+ } }
+    

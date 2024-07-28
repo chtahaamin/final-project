@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef} from 'react';
 import './UserQuote.css'
 
 
@@ -63,7 +63,7 @@ setShowAllQuotes(quotes)
         <div className="inputButton">
           <input type="text" 
           onChange={handleOnChange} 
-          KeyPress={handleKeyPress} 
+          onKeyPress={handleKeyPress} 
           value={value} />
           <div className="addQuote-Search-Btns">
           <button onClick={handleOnClick}  ref={addQuoteBtnRef}id="AddquoteBtn">Add quote</button>

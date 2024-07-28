@@ -6,7 +6,7 @@ import '../App.css'
 const MagicQuote = () => {
   const [userDisplay, setUserDisplay] = useState([]);
   const [userDisplay2, setUserDisplay2] = useState('');
-
+  const [authorName , setAuthorName]= useState("")
   useEffect(() => {
     const storedQuotes = JSON.parse(localStorage.getItem('quotes'));
     if (storedQuotes) {
@@ -24,7 +24,8 @@ const MagicQuote = () => {
       const indexOfQ = randomQuote.author ? randomQuote.author.indexOf(',') : -1;
       const sliced = indexOfQ !== -1 ? randomQuote.author.slice(0, indexOfQ) : randomQuote.author || 'Unknown';
 
-      setUserDisplay2(`${randomQuote.text}\n${sliced}`);
+      setUserDisplay2(`${randomQuote.text}`);
+      setAuthorName(`" ${sliced} "`)
       const updatedQuotes = [...userDisplay, randomQuote];
       setUserDisplay(updatedQuotes);
       localStorage.setItem('quotes', JSON.stringify(updatedQuotes));
@@ -39,6 +40,7 @@ const MagicQuote = () => {
         <h2 className="magicQuoteh2">Magic Quote</h2>
         <div className="quotesDisplayMain">
         <h4 className="quotesDisplay">{userDisplay2}</h4>
+        <h4 className="quotesDisplay"><i>{authorName}</i></h4>
         </div>
         <button onClick={fetchQuote} className="logout magicQuoteBtns">Generate Quote</button>
       </div>

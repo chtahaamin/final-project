@@ -6,6 +6,10 @@
   align-items:center;
   justify-content:center;
 }
+.loginHeading{
+  margin : 0 0 30px 0 ;
+  font-size: 2rem;
+}
 .login-container {
     background-color: #fff;
     padding: 20px;

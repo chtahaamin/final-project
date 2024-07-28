@@ -11,7 +11,8 @@
 }
 .btn-div{
     display:flex;
-    gap :15%
+    gap :15%;
+    margin: 0px 25px 0 0;
 }
 
 

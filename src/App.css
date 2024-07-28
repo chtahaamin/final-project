@@ -4,6 +4,7 @@
     padding:0;
     box-sizing :border-box;
     text-transform :capitalize;
+    font-family: "Poppins", sans-serif;
 }
 .container {
     /* max-width: 80%; */

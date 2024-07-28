@@ -7,6 +7,8 @@ const UserQuote = () => {
   const [quotes, setQuotes] = useState([]);
   const[showAllQuotes,setShowAllQuotes]=useState([])
   const [show,setShow]=useState(false)
+  const addQuoteBtnRef =useRef(null)
+  const searchBtnRef = useRef(null)
 
   useEffect(() => {
     const storedQuotes = JSON.parse(localStorage.getItem('userQuotes')) || [];
@@ -44,16 +46,28 @@ setShowAllQuotes(quotes)
     setQuotes(showAllQuotes)
     setShow(false)
   }
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      if (document.activeElement === addQuoteBtnRef.current) {
+        handleOnClick();
+      } else if (document.activeElement === searchBtnRef.current) {
+        handleSearch();
+      }
+    }
+  };
 
   return (
     <div className="userQuote container">
       <div>
         <h2>User Quotes</h2>
         <div className="inputButton">
-          <input type="text" onChange={handleOnChange} value={value} />
+          <input type="text" 
+          onChange={handleOnChange} 
+          KeyPress={handleKeyPress} 
+          value={value} />
           <div className="addQuote-Search-Btns">
-          <button onClick={handleOnClick} id="AddquoteBtn">Add quote</button>
-          <button onClick={handleSearch} id="searchBtn">search</button>
+          <button onClick={handleOnClick}  ref={addQuoteBtnRef}id="AddquoteBtn">Add quote</button>
+          <button onClick={handleSearch} ref={searchBtnRef}id="searchBtn">search</button>
           </div>
         </div>
       </div>

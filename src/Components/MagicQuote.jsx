@@ -24,8 +24,8 @@ const MagicQuote = () => {
       const indexOfQ = randomQuote.author ? randomQuote.author.indexOf(',') : -1;
       const sliced = indexOfQ !== -1 ? randomQuote.author.slice(0, indexOfQ) : randomQuote.author || 'Unknown';
 
-      setUserDisplay2(`${randomQuote.text}`);
-      setAuthorName(`" ${sliced} "`)
+      setUserDisplay2(`" ${randomQuote.text} "`);
+      setAuthorName(` - ${sliced}`)
       const updatedQuotes = [...userDisplay, randomQuote];
       setUserDisplay(updatedQuotes);
       localStorage.setItem('quotes', JSON.stringify(updatedQuotes));

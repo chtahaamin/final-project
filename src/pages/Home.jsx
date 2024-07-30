@@ -11,7 +11,7 @@ const Home = () => {
   const { loggedIn, logout } = useContext(LoginContext); 
 
   const handleLogout = () => {
-    localStorage.removeItem('authToken');
+  
     logout(); 
     // navigate('/', { replace: true });
   };

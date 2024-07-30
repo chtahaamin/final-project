@@ -35,7 +35,7 @@ const UserQuote = () => {
   const handleDeleteBtn = (index) => {
     const updatedQuotes = quotes.filter((_, i) => i !== index);
     setQuotes(updatedQuotes);
-    localStorage.setItem('userQuotes', JSON.stringify(updatedQuotes));
+    localStorage.setItem(`userQuotes_${email}`, JSON.stringify(updatedQuotes));
   };
   const handleSearch=()=>{
    if (value){  const filteredValue=quotes.filter((quote=>quote.quote.includes(value)))

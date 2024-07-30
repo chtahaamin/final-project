@@ -38,6 +38,7 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    text-transform: none;
   }
   
   .login-form-input:focus {

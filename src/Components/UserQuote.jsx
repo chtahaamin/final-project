@@ -30,7 +30,7 @@ const UserQuote = () => {
   };
 
   const handleDeleteBtn = (index) => {
-    const updatedQuotes = quotes.filter((quote, i) => i !== index);
+    const updatedQuotes = quotes.filter((_, i) => i !== index);
     setQuotes(updatedQuotes);
     localStorage.setItem('userQuotes', JSON.stringify(updatedQuotes));
   };
@@ -63,7 +63,7 @@ setShowAllQuotes(quotes)
         <div className="inputButton">
           <input type="text" 
           onChange={handleOnChange} 
-          onKeyPress={handleKeyPress} 
+          KeyPress={handleKeyPress} 
           value={value} />
           <div className="addQuote-Search-Btns">
           <button onClick={handleOnClick}  ref={addQuoteBtnRef}id="AddquoteBtn">Add quote</button>

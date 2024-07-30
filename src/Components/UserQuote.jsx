@@ -1,5 +1,7 @@
-import React, { useState, useEffect,useRef} from 'react';
-import './UserQuote.css'
+import React, { useState, useEffect,useRef, useContext} from 'react';
+import './UserQuote.css';
+
+import { EmailContext } from '../Components/EmailContetx';
 
 
 const UserQuote = () => {
@@ -9,9 +11,10 @@ const UserQuote = () => {
   const [show,setShow]=useState(false)
   const addQuoteBtnRef =useRef(null)
   const searchBtnRef = useRef(null)
+  const { email } = useContext(EmailContext)
 
   useEffect(() => {
-    const storedQuotes = JSON.parse(localStorage.getItem('userQuotes')) || [];
+    const storedQuotes = JSON.parse(localStorage.getItem(`userQuotes_${email}`)) || [];
     setQuotes(storedQuotes);
   }, []);
 
@@ -25,7 +28,7 @@ const UserQuote = () => {
       const updatedQuotes = [...quotes, newQuote];
       setQuotes(updatedQuotes);
       setValue('');
-      localStorage.setItem('userQuotes', JSON.stringify(updatedQuotes));
+      localStorage.setItem(`userQuotes_${email}`, JSON.stringify(updatedQuotes));
     }
   };
 
@@ -63,7 +66,8 @@ setShowAllQuotes(quotes)
         <div className="inputButton">
           <input type="text" 
           onChange={handleOnChange} 
-          KeyPress={handleKeyPress} 
+  
+          onKeyPress={handleKeyPress} 
           value={value} />
           <div className="addQuote-Search-Btns">
           <button onClick={handleOnClick}  ref={addQuoteBtnRef}id="AddquoteBtn">Add quote</button>

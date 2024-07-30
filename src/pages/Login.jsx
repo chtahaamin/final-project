@@ -1,6 +1,7 @@
-import React, {  useContext, useRef,useState } from 'react';
+import React, {  useContext, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { LoginContext } from '../Components/LoginContext';
+import { EmailContext } from '../Components/EmailContetx';
 import './Login.css'; 
 
 const Login = () => {
@@ -8,11 +9,13 @@ const Login = () => {
   const password = useRef();
   const navigate = useNavigate();
   const {login} =useContext(LoginContext)
+  const {setEmail}= useContext(EmailContext)
     
 
   const handleLogin = () => {
     const storedEmail = localStorage.getItem('email');
     const storedPassword = localStorage.getItem('password');
+    setEmail(storedEmail)
 
     if (email.current.value === storedEmail && password.current.value === storedPassword) {
       alert('Login successful');

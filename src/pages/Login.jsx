@@ -31,7 +31,8 @@ const Login = () => {
     <div className="login-container-main">
     <div className="login-container">
       <h2  className="loginHeading">Login</h2>
-      <div className="login-form">
+        <form onSubmit={handleLogin}>
+      <div className="login-form" onSubmit={handleLogin }>
         <div className="login-form-group">
           <input
             type="email"
@@ -48,11 +49,12 @@ const Login = () => {
             className="login-form-input"
           />
         </div>
-        <button onClick={handleLogin} 
+        <button type='submit' 
         className="login-form-button">Login</button>
         <Link to="/signup" 
         className="signup-link">Don't have an account? Sign Up</Link>
       </div>
+      </form>
     </div>
     </div>
     </>

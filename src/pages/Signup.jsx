@@ -42,6 +42,7 @@ const SignUp = () => {
     <div className="signup-container">
 
       <h2 className="signupHeading">Sign Up</h2>
+      <form onSubmit={handleSignUp}>
       <div className="signup-form">
         <div className="signup-form-group">
           <input
@@ -67,9 +68,10 @@ const SignUp = () => {
             className="signup-form-input"
           />
         </div>
-        <button onClick={handleSignUp} className="signup-form-button">Sign Up</button>
+        <button type="submit" className="signup-form-button">Sign Up</button>
         <Link to="/login" className="login-link">Already have an account? Login</Link>
       </div>
+      </form>
     </div>
     </div>
     </>

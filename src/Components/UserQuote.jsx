@@ -64,10 +64,10 @@ setShowAllQuotes(quotes)
       <div>
         <h2>User Quotes</h2>
         <div className="inputButton">
-          <input type="text" 
+        <input type="text" 
           onChange={handleOnChange} 
   
-          onKeyPress={handleKeyPress} 
+          onKeyDown={handleKeyPress} 
           value={value} />
           <div className="addQuote-Search-Btns">
           <button onClick={handleOnClick}  ref={addQuoteBtnRef}id="AddquoteBtn">Add quote</button>

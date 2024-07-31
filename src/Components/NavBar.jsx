@@ -12,7 +12,7 @@ const NavBar=()=>{
     return (
     <>
     <div className ="navbar container">
-        <div ><h1 className="Navbar-H1">wisdom`s sac</h1></div>
+        <div ><h1 className="Navbar-H1">wisdom's sac</h1></div>
         <div className="btn-div">
           { loggedIn?(<Link  className ="linkSignInBtn"to ="/Login" onClick ={handleClick}>logout</Link>): (<><Link  className ="linkSignInBtn"to ="/Login">logIn</Link>
             <Link className ="linkSignUpBtn" to="/signup">Signup</Link></>)

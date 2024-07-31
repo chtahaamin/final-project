@@ -1,8 +1,12 @@
 {
-  "rewrites": [
-    { "source": "/signup/(.*)", "destination": "/signup" },
-    { "source": "/login/(.*)", "destination": "/login" },
-    { "source": "/(.*)", "destination": "/" },
-    { "source": "(.*)", "destination": "/" }
+  "version": 2,
+  "builds": [
+    { "src": "*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/signup/(.*)", "dest": "/signup" },
+    { "src": "/login/(.*)", "dest": "/login" },
+    { "src": "/(.*)", "dest": "/" },
+    { "src": "(.*)", "dest": "/" }
   ]
 }

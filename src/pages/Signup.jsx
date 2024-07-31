@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import {email } from '../Components/EmailContetx'
+
 import {ValidEmail, ValidPassword,ValidName}  from '../Components/RegeEx'
 import './Signup.css'; 
 

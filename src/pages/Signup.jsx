@@ -46,7 +46,7 @@ const SignUp = () => {
         <div className="signup-form-group">
           <input
             type="text"
-            placeholder="Please enter your name"
+            placeholder="Please enter your username"
             ref={name}
             className="signup-form-input"
           />

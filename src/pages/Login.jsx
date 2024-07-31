@@ -20,6 +20,7 @@ const Login = () => {
     if (email.current.value === storedEmail && password.current.value === storedPassword) {
       navigate('/', { replace: true });
       localStorage.setItem('isLoggedIn', true);
+      alert(`you have successfully logged in `)
       login()
     } else {
       alert('Invalid email or password');

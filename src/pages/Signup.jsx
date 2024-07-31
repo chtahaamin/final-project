@@ -29,7 +29,9 @@ const SignUp = () => {
       localStorage.setItem('email', email.current.value);
       localStorage.setItem('password', password.current.value);
       localStorage.setItem('signUp', email.current.value);
+      alert("you have successfully signed up")
       navigate('/login', { replace: true });
+      
     } else {
       alert('Please enter your credentials');
     }

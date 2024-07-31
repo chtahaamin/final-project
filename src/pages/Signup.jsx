@@ -29,7 +29,6 @@ const SignUp = () => {
       localStorage.setItem('email', email.current.value);
       localStorage.setItem('password', password.current.value);
       localStorage.setItem('signUp', email.current.value);
-      alert('Your account is created successfully');
       navigate('/login', { replace: true });
     } else {
       alert('Please enter your credentials');
@@ -47,7 +46,7 @@ const SignUp = () => {
         <div className="signup-form-group">
           <input
             type="text"
-            placeholder="Please enter your name"
+            placeholder="Please enter your username"
             ref={name}
             className="signup-form-input"
           />

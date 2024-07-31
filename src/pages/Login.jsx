@@ -12,7 +12,8 @@ const Login = () => {
   const {setEmail}= useContext(EmailContext)
     
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     const storedEmail = localStorage.getItem('email');
     const storedPassword = localStorage.getItem('password');
     setEmail(storedEmail)

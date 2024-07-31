@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import {email } from '../Components/EmailContetx'
 import {ValidEmail, ValidPassword,ValidName}  from '../Components/RegeEx'
 import './Signup.css'; 
 
@@ -9,7 +10,8 @@ const SignUp = () => {
   const password = useRef();
   const navigate = useNavigate();
 
-  const handleSignUp = () => {
+  const handleSignUp = (e) => {
+    e.preventDefault();
     if (name.current.value && email.current.value && password.current.value) {
       if (!ValidName.test(name.current.value)) {
         alert('Please enter a valid name (5-30 alphabetic characters)');

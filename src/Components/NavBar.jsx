@@ -8,6 +8,7 @@ const NavBar=()=>{
     const {loggedIn,logout} = useContext(LoginContext)
     const handleClick=()=>{
         logout()
+        localStorage.removeItem('isLoggedIn');
     }
     return (
     <>

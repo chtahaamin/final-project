@@ -7,23 +7,23 @@ import { LoginContext } from '../Components/LoginContext'
 import './Home.css';
 
 const Home = () => {
-  // const navigate = useNavigate();
-  const { loggedIn, logout } = useContext(LoginContext); 
+
+  const { loggedIn, logout } = useContext(LoginContext);
 
   const handleLogout = () => {
-  
-    logout(); 
-    // navigate('/', { replace: true });
+
+    logout();
+
   };
 
   return (
     <div className=" container  home-container">
-      {!loggedIn && <NavBar />} 
+      {!loggedIn && <NavBar />}
       <h1 className="home-container-h1 ">Welcome to Quote Generator. Please press Generate quote button to get quote</h1>
       <MagicQuote />
-      {loggedIn && <UserQuote />} 
-     {loggedIn?( <button onClick={handleLogout} className="logout-btn">Log Out</button>):<div className ="container signin-div">please login to view save quotations</div>}
-    
+      {loggedIn && <UserQuote />}
+      {loggedIn ? (<button onClick={handleLogout} className="logout-btn">Log Out</button>) : <div className="container signin-div">please login to view save quotations</div>}
+
     </div>
   );
 };

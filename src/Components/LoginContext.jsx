@@ -14,7 +14,10 @@ export const LoginProvider = ({ children }) => {
   }, [loggedIn]);
 
   const login = () => setLoggedIn(true);
-  const logout = () => setLoggedIn(false);
+  const logout = () => {
+    setLoggedIn(false)
+  localStorage.removeItem("isLoggedIn") }
+  ;
 
   return (
     <LoginContext.Provider value={{ loggedIn, login, logout }}>

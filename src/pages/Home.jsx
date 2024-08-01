@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-// import { useNavigate } from 'react-router-dom';
 import MagicQuote from '../Components/MagicQuote';
 import UserQuote from '../Components/UserQuote';
 import NavBar from '../Components/NavBar';

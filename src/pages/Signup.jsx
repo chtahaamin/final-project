@@ -29,19 +29,15 @@ const SignUp = () => {
       }
      
 
-      const existingUser = users.find(user => user.email === email.current.value);
-      if (existingUser) {
-        alert('Email already registered');
-        return;
-      }
+    
       const newUser = {
         name: name.current.value,
         email: email.current.value,
         password: password.current.value,
       };
-      users.push(newUser);
-      localStorage.setItem('users', JSON.stringify(users));
+      localStorage.setItem(`users${email.current.value}`, JSON.stringify(newUser));
       const users = JSON.parse(localStorage.getItem('users')) || [];
+  
 
       alert("You have successfully signed up");
       navigate('/login', { replace: true });

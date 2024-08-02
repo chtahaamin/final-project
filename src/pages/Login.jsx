@@ -14,14 +14,14 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    
+
     if (email.current.value == JSON.parse(localStorage.getItem(`users${email.current.value}`)).email && password.current.value == JSON.parse(localStorage.getItem(`users${email.current.value}`)).password) {
       setEmail(JSON.parse(localStorage.getItem(`users${email.current.value}`)).email)
       navigate('/', { replace: true });
       localStorage.setItem('isLoggedIn', true);
-      alert(`you have successfully logged in `)
       login()
-    } else {
+    }
+    else {
       alert('Invalid email or password');
     }
   };
